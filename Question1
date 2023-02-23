@@ -1,0 +1,25 @@
+When U have two input fields and click submit fisrts input shoulb in  second input field ?
+
+
+import React ,{useState} from 'react'
+import "./styles.css";
+
+export default function App() {
+   const [data, setData]= useState('')
+   const [input2Value, setInput2Value] = useState('');
+    const handleclick= ()=>{
+      setInput2Value(data)
+       setData('')
+    }
+
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <input type ='text' name='name' value={data} onChange={(e)=>setData(e.target.value)}/>
+      <input type='text' value={input2Value} onChange={(e)=>setInput2Value(e.target.value)}/>
+      <button onClick={handleclick}>Submit</
+      button>
+    </div>
+  );
+}
